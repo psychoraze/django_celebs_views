@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Celebrities List</title>
+</head>
+<body>
+   <h1>Celebrities List Dazhi</h1>
+   <a href="{% url 'create' %}"><p>Create</p></a>
+   {% for celebrity in celebrities %}
+      <a href="{% url 'detail' celebrity.pk %}"><p>{{celebrity.name}}</p></a>
+   {% endfor %}
+</body>
+</html>
